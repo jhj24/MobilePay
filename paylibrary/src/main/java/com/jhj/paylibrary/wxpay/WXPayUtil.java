@@ -14,12 +14,10 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 public class WXPayUtil {
 
-    public static String WX_APP_ID;
 
     public static void pay(Context mContext, WXPayBean bean, String merchantKey) {
         String time = String.valueOf(System.currentTimeMillis() / 1000);
-        WX_APP_ID = bean.getAppid();
-        IWXAPI wxApi = WXAPIFactory.createWXAPI(mContext, bean.getAppid());
+        IWXAPI wxApi = WXAPIFactory.createWXAPI(mContext, bean.getAppid(), true);
         wxApi.registerApp(bean.getAppid());
         if (wxApi.getWXAppSupportAPI() < Build.PAY_SUPPORTED_SDK_INT) {
             Toast.makeText(mContext, "您未安装最新版本微信，不支持微信支付，请安装或升级微信版本", Toast.LENGTH_SHORT).show();

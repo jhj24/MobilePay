@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.jhj.paydemo.Config;
 import com.jhj.paylibrary.R;
-import com.jhj.paylibrary.WXPayUtil;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
@@ -25,7 +25,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pay_result);
 
-        api = WXAPIFactory.createWXAPI(this, WXPayUtil.WX_APP_ID);
+        api = WXAPIFactory.createWXAPI(this, Config.WX_PAY_APP_ID);
         api.handleIntent(getIntent(), this);
     }
 
