@@ -1,4 +1,4 @@
-package com.jhj.paylibrary;
+package com.jhj.paylibrary.wxpay;
 
 import com.tencent.mm.opensdk.modelpay.PayReq;
 

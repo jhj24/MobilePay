@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.wxapi;
+package com.jhj.paydemo.wxapi;
 
 
 import android.app.Activity;

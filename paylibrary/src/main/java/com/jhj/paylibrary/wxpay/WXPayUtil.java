@@ -1,4 +1,4 @@
-package com.jhj.paylibrary;
+package com.jhj.paylibrary.wxpay;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -17,7 +17,7 @@ public class WXPayUtil {
     public static String WX_APP_ID;
 
     public static void pay(Context mContext, WXPayBean bean, String merchantKey) {
-        String time = String.valueOf(System.currentTimeMillis());
+        String time = String.valueOf(System.currentTimeMillis() / 1000);
         WX_APP_ID = bean.getAppid();
         IWXAPI wxApi = WXAPIFactory.createWXAPI(mContext, bean.getAppid());
         wxApi.registerApp(bean.getAppid());
@@ -30,7 +30,7 @@ public class WXPayUtil {
         request.prepayId = bean.getPrepay_id();
         request.packageValue = "Sign=WXPay";
         request.nonceStr = bean.getNonce_str();
-        request.timeStamp = time.substring(0, 10);
+        request.timeStamp = time;
         request.sign = WXSignEncryptionUtil.genPayReq(request, merchantKey);
         wxApi.sendReq(request);
     }

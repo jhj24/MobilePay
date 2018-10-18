@@ -1,7 +1,8 @@
-package com.jhj.paylibrary;
+package com.jhj.paylibrary.wxpay;
 
 /**
- * 微信支付Bean
+ * 在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再在APP里面调起支付
+ * <p>
  * Created by jhj on 18-10-18.
  */
 
@@ -43,9 +44,25 @@ public class WXPayBean {
      * "APP"
      */
     private String trade_type;
-    private String result_code;  // ":"SUCCESS",
-    private String return_code;  // ":"SUCCESS",
-    private String return_msg;  // ":"OK",
+
+    /**
+     * 业务结果
+     * <p>
+     * "SUCCESS","FAIL"
+     */
+    private String result_code;
+    /**
+     * 返回状态码
+     * <p>
+     * "SUCCESS",
+     */
+    private String return_code;
+    /**
+     * 返回状态信息
+     * <p>
+     * "OK","签名失败"
+     */
+    private String return_msg;
 
     public String getAppid() {
         return appid;
