@@ -19,10 +19,10 @@ public class AliPay {
     private static final int ERROR_PAY = 2;  //支付失败
     private static final int ERROR_NETWORK = 3;  //网络连接错误
 
-    private Handler handler = new Handler();
+    private static Handler handler = new Handler();
 
 
-    public void pay(final Activity activity, final String orderInfo, final AliPayResultCallback mCallback) {
+    public static void pay(final Activity activity, final String orderInfo, final AliPayResultCallback mCallback) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -43,7 +43,7 @@ public class AliPay {
 
 
                         AliPayResult payResult = new AliPayResult(result);
-                        /**
+                        /*
                          对于支付结果，请商户依赖服务端的异步通知结果。同步通知结果，仅作为支付结束的通知。
                          */
                         String resultInfo = payResult.getResult();// 同步返回需要验证的信息
