@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.alipay;
+package com.jhj.pay.alipay;
 
 import android.app.Activity;
 import android.os.Handler;

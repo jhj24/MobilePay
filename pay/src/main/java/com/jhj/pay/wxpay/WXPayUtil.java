@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.wxpay;
+package com.jhj.pay.wxpay;
 
 import android.content.Context;
 import android.widget.Toast;

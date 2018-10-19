@@ -1,4 +1,4 @@
-package com.jhj.paylibrary;
+package com.jhj.pay;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

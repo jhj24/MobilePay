@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.wxpay;
+package com.jhj.pay.wxpay;
 
 import java.security.MessageDigest;
 

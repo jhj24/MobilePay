@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.jhj.paydemo.Config;
-import com.jhj.paylibrary.R;
+import com.jhj.pay.R;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;

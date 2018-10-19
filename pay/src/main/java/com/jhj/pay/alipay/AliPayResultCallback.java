@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.alipay;
+package com.jhj.pay.alipay;
 
 /**
  * Created by jhj on 18-10-18.

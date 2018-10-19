@@ -1,4 +1,4 @@
-package com.jhj.paylibrary.wxpay;
+package com.jhj.pay.wxpay;
 
 /**
  * 在微信支付服务后台生成预支付交易单，返回正确的预支付交易会话标识后再在APP里面调起支付
